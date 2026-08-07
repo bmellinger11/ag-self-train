@@ -24,7 +24,7 @@ You should be comfortable with:
 
 ## Quick Start
 
-**Time to first working feature:** ~90 minutes (Module 2). **Full curriculum:** ~10-15 hours across 10 modules. 
+**Time to first working feature:** ~90 minutes (Module 2). **Full curriculum:** ~10-15 hours across 10 lessons. 
 
 1. **Clone this repo into your workspace:**
    ```bash
@@ -51,9 +51,9 @@ You've installed Antigravity IDE and want to know how to use it optimally. Pick 
 
 *All options teach the exact same 10 IDE capabilities. Pick based on interest.*
 
-## The 10 Modules
+## The 10 Lessons
 
-| # | Module | Antigravity IDE Features Taught |
+| # | Lesson | Antigravity IDE Features Taught |
 |---|--------|---------------------------------|
 | 1 | **Setup & First Contact** | Workspace Customization Roots (`.agents/`), `learner_profile.json`, Agent Chat UI, basic Artifacts |
 | 2 | **Blueprint & Build** | **Planning Mode**, `implementation_plan.md`, `task.md` checklists, `walkthrough.md` |

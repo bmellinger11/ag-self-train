@@ -12,13 +12,13 @@ Activate this skill when the user types `learn-ide` or explicitly asks to start 
 When triggered, first check if `learner_profile.json` exists in the workspace root. If it does not exist, create it with the following default content:
 ```json
 {
-  "current_module": 1,
+  "current_lesson": 1,
   "persona": "Guide",
   "struggle_score": 0,
   "independence_score": 0
 }
 ```
-Read the `learner_profile.json` file to determine the current `persona` and `current_module`.
+Read the `learner_profile.json` file to determine the current `persona` and `current_lesson`.
 
 ## Teaching Personas
 Adopt the persona specified in `learner_profile.json` during all interactions in this curriculum:
@@ -29,7 +29,9 @@ Adopt the persona specified in `learner_profile.json` during all interactions in
 4. **Launcher (Expert):** Challenge the user. Give them high-level objectives and let them solve the problems entirely independently. Only intervene if explicitly asked or if they deviate significantly.
 
 ## Execution
-After determining the persona, begin or continue the curriculum by reading the appropriate module from `.agents/skills/ag-self-train/curriculum/`.
+After determining the persona, begin or continue the curriculum by reading the appropriate lesson from `.agents/skills/ag-self-train/curriculum/`.
 
 ### Step-Pacing Primitive
-To enforce pacing and ensure the user actually learns, use Conversational Pacing. When you reach a `** STOP **` block, output the current step, explicitly tell the user to complete the task in the chat, and **end your turn**. Leave the chat UI unblocked so the user can interact with the Agent. The user will type 'next' or 'continue' to resume. Do not dump the entire module at once.
+To enforce pacing and ensure the user actually learns, use Artifact Pacing with Fractional Checkpoints. When reading a lesson file, output the content **ONLY** up to the very first `### Checkpoint X.X` or `** STOP **` block that you have not yet shown the user. Once you reach that checkpoint, explicitly tell the user to complete the task in the chat. Do **NOT** generate the pacing artifact yourself. Simply end your turn. 
+
+When the user completes the task, the Agent will execute it and automatically generate the `lesson_checkpoint.md` artifact via a global rule. When the user clicks the blue Proceed button on that artifact, resume outputting the lesson file from that point until the *next* checkpoint. Do not dump the entire lesson at once.

@@ -1,6 +1,6 @@
 **Persona -- Guide:** Maintain a patient, guiding tone. Explain Planning Mode thoroughly.
 
-# Module 2: Blueprint and Build
+# Lesson 2: Blueprint and Build
 
 In Module 1, you asked the Agent to execute a simple, one-off task. But what happens when you want to build something complex that requires architectural changes across multiple files?
 
@@ -16,15 +16,23 @@ Let's make our boring green rectangle move! We want it to bounce around the canv
 
 **Your Task:**
 Type the following prompt into the chat:
-> "Please create a plan to make the green rectangle bounce around the canvas. Request my feedback so I can review it before you write the code."
+```text
+Please create a plan to make the green rectangle bounce around the canvas. Request my feedback so I can review it before you write the code.
+```
 
-** STOP -- What you just did:** You instructed the Agent to formulate a strategy rather than immediately writing code. The Agent should now present you with an `implementation_plan.md` Artifact outlining the necessary changes to `app.js` to create an HTML animation loop.
+### Checkpoint 2.1
+** STOP -- Waiting for user confirmation.**
+*Note for Orchestrator: End your turn here. Wait for the user to click Proceed before showing the next step.*
+
+---
+
+**What you just did:** You instructed the Agent to formulate a strategy rather than immediately writing code. The Agent should now present you with an `implementation_plan.md` Artifact outlining the necessary changes to `app.js` to create an HTML animation loop.
 
 ## 2.3 Approving the Plan and Tracking Tasks
 Read through the implementation plan. If it looks good, click the **Proceed** button in the UI. 
 
 Once approved, the Agent will begin execution. It will automatically generate a `task.md` checklist Artifact so you can track its progress as it modifies your files.
 
-### Checkpoint 2
+### Checkpoint 2.2
 ** STOP -- Waiting for user confirmation.**
-*Note for Orchestrator: End your turn here. Wait for the user to run the prompt and say 'continue' before showing the next step.*
+*Note for Orchestrator: End your turn here. Wait for the user to click Proceed before showing the next step.*

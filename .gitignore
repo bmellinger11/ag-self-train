@@ -10,3 +10,7 @@ app.js
 
 # Original reference repo
 cc-self-train/
+
+# Lesson artifacts and files
+test_canvas.py
+.agents/plugins/canvas-tools/
