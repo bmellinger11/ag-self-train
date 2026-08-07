@@ -11,7 +11,7 @@ Learn [Antigravity IDE](https://antigravity.google/docs/home) by building a real
 <details>
 <summary>Under the hood: the research behind this curriculum</summary>
 
-This repository is an architectural adaptation of the **cc-self-train** framework (originally for Claude Code) built to natively leverage Antigravity IDE capabilities. It preserves the five pedagogical research contributions: (1) a **persona progression model**, (2) an **adaptive learning system** powered by Python daemons observing your transcript, (3) a **cross-domain unified curriculum**, (4) a **step-pacing mechanism** utilizing the `ask_question` tool, and (5) an **auto-updating curriculum design** powered by Antigravity Skills. See [MIGRATION_PLAN.md](MIGRATION_PLAN.md) for full architectural details.
+This repository is an architectural adaptation of the **cc-self-train** framework (originally for Claude Code) built to natively leverage Antigravity IDE capabilities. It preserves the five pedagogical research contributions: (1) a **persona progression model**, (2) an **adaptive learning system** powered by Python daemons observing your transcript, (3) a **cross-domain unified curriculum**, (4) a **step-pacing mechanism** utilizing conversational turn-taking, and (5) an **auto-updating curriculum design** powered by Antigravity Skills. See [MIGRATION_PLAN.md](MIGRATION_PLAN.md) for full architectural details.
 
 </details>
 
@@ -28,7 +28,7 @@ You should be comfortable with:
 
 1. **Clone this repo into your workspace:**
    ```bash
-   git clone https://github.com/your-username/ag-self-train.git
+   git clone https://github.com/bmellinger11/ag-self-train.git
    cd ag-self-train
    ```
 2. **Open the repository in Antigravity IDE.**

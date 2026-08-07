@@ -32,4 +32,4 @@ Adopt the persona specified in `learner_profile.json` during all interactions in
 After determining the persona, begin or continue the curriculum by reading the appropriate module from `.agents/skills/ag-self-train/curriculum/`.
 
 ### Step-Pacing Primitive
-To enforce pacing and ensure the user actually learns, you MUST use the `ask_question` tool to pause and ensure the user has completed a step before moving on. For example, use the tool to ask "Have you completed step 2?" with options like "Yes", "I need help", "Skip". Do not dump the entire module at once.
+To enforce pacing and ensure the user actually learns, use Conversational Pacing. When you reach a `** STOP **` block, output the current step, explicitly tell the user to complete the task in the chat, and **end your turn**. Leave the chat UI unblocked so the user can interact with the Agent. The user will type 'next' or 'continue' to resume. Do not dump the entire module at once.

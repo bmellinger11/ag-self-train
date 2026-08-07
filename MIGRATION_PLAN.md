@@ -10,7 +10,7 @@ Zain's paper outlines five core pedagogical design patterns. We have mapped each
 | **Persona Progression** | Static prompts in `CLAUDE.md` and module-specific frontmatter. | The master Orchestrator Skill (`.agents/skills/ag-self-train/SKILL.md`) dynamically injects the Persona (Guide -> Collaborator -> Peer -> Launcher) based on the state in `learner_profile.json`. |
 | **Adaptive Learning** | `SessionStart` / `Stop` hooks parsing the terminal interaction. | A Python daemon (`scripts/observe_interaction.py`) that parses the Antigravity `transcript.jsonl` log, tracks engagement quality, and updates the learner's effective level. |
 | **Unified Curriculum** | 5 project types (Canvas, Forge, Nexus, Sentinel, BYOP) sharing 10 module sequences. | **Preserved:** We retain the 5 cross-domain project structures, ensuring that learning is focused on the IDE capabilities rather than the project logic. |
-| **Step-Pacing** | `**STOP**` blocks enforced by LLM prompt adherence. | The native `ask_question` tool forces a hard UI pause (e.g. "Have you completed Step 1?") to enforce information load management. |
+| **Step-Pacing** | `**STOP**` blocks enforced by LLM prompt adherence. | **Conversational Pacing:** The Orchestrator presents the step and explicitly ends its turn, leaving the chat UI unblocked so the user can interact with the Agent. The user types 'next' to resume. |
 | **Auto-Updating** | A `/sync` skill triggered at `/start` that fetches the changelog and injects updates. | An `auto-updater` Skill utilizing Antigravity's agentic tools to fetch the IDE changelog, research features, and use `replace_file_content` to append new steps. Can be automated via the `/schedule` slash command. |
 
 ## 2. Feature Coverage Parity
