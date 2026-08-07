@@ -1,0 +1,12 @@
+# Learner profile (generated state)
+learner_profile.json
+
+# Project files generated during modules
+index.html
+app.js
+
+# OS generated files
+.DS_Store
+
+# Original reference repo
+cc-self-train/
